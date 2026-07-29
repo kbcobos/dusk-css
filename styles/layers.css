@@ -1,0 +1,149 @@
+.sky {
+  z-index: 1;
+  background: #2b2b33;
+}
+
+.celestial-body {
+  z-index: 2;
+  top: 60px;
+  left: 60px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  inset: auto;
+}
+
+.stars {
+  z-index: 3;
+  opacity: 0;
+}
+
+.clouds {
+  z-index: 4;
+}
+
+.cloud {
+  position: absolute;
+  background: #cfcfcf;
+  border-radius: 50px;
+  opacity: 0.85;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.cloud--1 {
+  top: 90px;
+  left: 480px;
+  width: 100px;
+  height: 30px;
+}
+.cloud--1::before {
+  width: 50px;
+  height: 50px;
+  top: -20px;
+  left: 10px;
+}
+.cloud--1::after {
+  width: 40px;
+  height: 40px;
+  top: -15px;
+  left: 55px;
+}
+
+.cloud--2 {
+  top: 150px;
+  left: 600px;
+  width: 70px;
+  height: 22px;
+  transform: scale(0.8);
+}
+.cloud--2::before {
+  width: 35px;
+  height: 35px;
+  top: -14px;
+  left: 8px;
+}
+.cloud--2::after {
+  width: 28px;
+  height: 28px;
+  top: -10px;
+  left: 38px;
+}
+
+.mountains {
+  bottom: 0;
+  top: auto;
+  height: 260px;
+}
+
+.mountains--back {
+  z-index: 5;
+  background: #4a4a55;
+  clip-path: polygon(
+    0% 100%, 0% 60%, 15% 35%, 30% 55%, 45% 20%,
+    60% 50%, 75% 30%, 90% 58%, 100% 40%, 100% 100%
+  );
+}
+
+.mountains--front {
+  z-index: 6;
+  background: #3a3a44;
+  height: 200px;
+  clip-path: polygon(
+    0% 100%, 0% 70%, 20% 45%, 35% 65%, 55% 30%,
+    70% 60%, 85% 40%, 100% 65%, 100% 100%
+  );
+}
+
+.centerpiece {
+  z-index: 7;
+  bottom: 90px;
+  left: 50%;
+  top: auto;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: fit-content;
+  inset: auto;
+}
+
+.tree {
+  position: relative;
+  width: 100px;
+  height: 140px;
+}
+
+.tree__trunk {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 50px;
+  background: #5a4634;
+}
+
+.tree__foliage {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #4f6b4a;
+}
+
+.ground {
+  z-index: 8;
+  top: auto;
+  bottom: 0;
+  height: 90px;
+  background: #3d3d2f;
+}
