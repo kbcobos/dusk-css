@@ -8,36 +8,50 @@
   <link rel="stylesheet" href="styles/variables.css" />
   <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/layers.css" />
+  <link rel="stylesheet" href="styles/toggle.css" />
 </head>
 <body>
 
-  <main class="scene" aria-label="Ilustración de paisaje en CSS">
+  <div class="scene-wrapper">
 
-    <div class="layer sky"></div>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-input" />
+    <label
+      for="theme-toggle"
+      class="theme-toggle-label"
+      aria-label="Cambiar entre día y noche"
+    >
+      <span class="theme-toggle-icon"></span>
+    </label>
 
-    <div class="layer celestial-body"></div>
+    <main class="scene" aria-label="Ilustración de paisaje en CSS">
 
-    <div class="layer stars"></div>
+      <div class="layer sky"></div>
 
-    <div class="layer clouds">
-      <div class="cloud cloud--1"></div>
-      <div class="cloud cloud--2"></div>
-    </div>
+      <div class="layer celestial-body"></div>
 
-    <div class="layer mountains mountains--back"></div>
+      <div class="layer stars"></div>
 
-    <div class="layer mountains mountains--front"></div>
-
-    <div class="layer centerpiece">
-      <div class="tree">
-        <div class="tree__trunk"></div>
-        <div class="tree__foliage"></div>
+      <div class="layer clouds">
+        <div class="cloud cloud--1"></div>
+        <div class="cloud cloud--2"></div>
       </div>
-    </div>
 
-    <div class="layer ground"></div>
+      <div class="layer mountains mountains--back"></div>
 
-  </main>
+      <div class="layer mountains mountains--front"></div>
+
+      <div class="layer centerpiece">
+        <div class="tree">
+          <div class="tree__trunk"></div>
+          <div class="tree__foliage"></div>
+        </div>
+      </div>
+
+      <div class="layer ground"></div>
+
+    </main>
+
+  </div>
 
 </body>
 </html>
