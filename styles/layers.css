@@ -1,6 +1,11 @@
 .sky {
   z-index: 1;
-  background: #2b2b33;
+  background: linear-gradient(
+    to bottom,
+    var(--sky-top),
+    var(--sky-bottom)
+  );
+  transition: background 0.6s ease;
 }
 
 .celestial-body {
@@ -10,13 +15,33 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background: #d9d9d9;
+  background: var(--celestial-body-color);
+  box-shadow: 0 0 40px 10px var(--celestial-body-glow);
   inset: auto;
+  transition: background 0.6s ease, box-shadow 0.6s ease;
 }
 
 .stars {
   z-index: 3;
-  opacity: 0;
+  opacity: var(--stars-opacity);
+  transition: opacity 0.6s ease;
+}
+
+.stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    40px 30px #fff, 120px 60px #fff, 200px 20px #fff,
+    260px 90px #fff, 340px 40px #fff, 420px 70px #fff,
+    500px 25px #fff, 90px 120px #fff, 180px 140px #fff,
+    300px 110px #fff, 380px 130px #fff, 460px 100px #fff,
+    550px 50px #fff, 620px 90px #fff, 700px 30px #fff,
+    650px 150px #fff, 30px 180px #fff, 150px 190px #fff;
 }
 
 .clouds {
@@ -25,9 +50,10 @@
 
 .cloud {
   position: absolute;
-  background: #cfcfcf;
+  background: var(--cloud-color);
   border-radius: 50px;
-  opacity: 0.85;
+  opacity: var(--cloud-opacity);
+  transition: background 0.6s ease, opacity 0.6s ease;
 }
 
 .cloud::before,
@@ -85,21 +111,23 @@
 
 .mountains--back {
   z-index: 5;
-  background: #4a4a55;
+  background: var(--mountain-back);
   clip-path: polygon(
     0% 100%, 0% 60%, 15% 35%, 30% 55%, 45% 20%,
     60% 50%, 75% 30%, 90% 58%, 100% 40%, 100% 100%
   );
+  transition: background 0.6s ease;
 }
 
 .mountains--front {
   z-index: 6;
-  background: #3a3a44;
+  background: var(--mountain-front);
   height: 200px;
   clip-path: polygon(
     0% 100%, 0% 70%, 20% 45%, 35% 65%, 55% 30%,
     70% 60%, 85% 40%, 100% 65%, 100% 100%
   );
+  transition: background 0.6s ease;
 }
 
 .centerpiece {
@@ -126,7 +154,8 @@
   transform: translateX(-50%);
   width: 14px;
   height: 50px;
-  background: #5a4634;
+  background: var(--tree-trunk);
+  transition: background 0.6s ease;
 }
 
 .tree__foliage {
@@ -137,7 +166,8 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: #4f6b4a;
+  background: var(--tree-foliage);
+  transition: background 0.6s ease;
 }
 
 .ground {
@@ -145,5 +175,6 @@
   top: auto;
   bottom: 0;
   height: 90px;
-  background: #3d3d2f;
+  background: var(--ground-color);
+  transition: background 0.6s ease;
 }

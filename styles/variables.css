@@ -1,3 +1,41 @@
-:root{
+:root {
+  --sky-top: #7ec8e3;
+  --sky-bottom: #ffe1a8;
 
+  --celestial-body-color: #fff4d6;
+  --celestial-body-glow: rgba(255, 244, 214, 0.55);
+
+  --stars-opacity: 0;
+
+  --cloud-color: #ffffff;
+  --cloud-opacity: 0.9;
+
+  --mountain-back: #a8c8a0;
+  --mountain-front: #7fa374;
+
+  --tree-trunk: #6b4a34;
+  --tree-foliage: #4f7942;
+
+  --ground-color: #8a9a5b;
+}
+
+.theme-toggle-input:checked ~ .scene {
+  --sky-top: #0b1026;
+  --sky-bottom: #2c2a4a;
+
+  --celestial-body-color: #e8e8f0;
+  --celestial-body-glow: rgba(232, 232, 240, 0.35);
+
+  --stars-opacity: 1;
+
+  --cloud-color: #4a4a63;
+  --cloud-opacity: 0.6;
+
+  --mountain-back: #2e2e45;
+  --mountain-front: #1c1c30;
+
+  --tree-trunk: #2e2118;
+  --tree-foliage: #1f3320;
+
+  --ground-color: #23291a;
 }
