@@ -10,10 +10,11 @@
 
 .celestial-body {
   z-index: 2;
-  top: 60px;
-  left: 60px;
-  width: 90px;
-  height: 90px;
+  top: 12%;
+  left: 7.5%;
+  width: 11%;
+  aspect-ratio: 1 / 1;
+  height: auto;
   border-radius: 50%;
   background: var(--celestial-body-color);
   box-shadow: 0 0 40px 10px var(--celestial-body-glow);
@@ -36,12 +37,12 @@
   height: 2px;
   background: transparent;
   box-shadow:
-    40px 30px #fff, 120px 60px #fff, 200px 20px #fff,
-    260px 90px #fff, 340px 40px #fff, 420px 70px #fff,
-    500px 25px #fff, 90px 120px #fff, 180px 140px #fff,
-    300px 110px #fff, 380px 130px #fff, 460px 100px #fff,
-    550px 50px #fff, 620px 90px #fff, 700px 30px #fff,
-    650px 150px #fff, 30px 180px #fff, 150px 190px #fff;
+    5vw 3.75vw #fff, 15vw 7.5vw #fff, 25vw 2.5vw #fff,
+    32.5vw 11.25vw #fff, 42.5vw 5vw #fff, 52.5vw 8.75vw #fff,
+    62.5vw 3.125vw #fff, 11.25vw 15vw #fff, 22.5vw 17.5vw #fff,
+    37.5vw 13.75vw #fff, 47.5vw 16.25vw #fff, 57.5vw 12.5vw #fff,
+    68.75vw 6.25vw #fff, 77.5vw 11.25vw #fff, 87.5vw 3.75vw #fff,
+    81.25vw 18.75vw #fff, 3.75vw 22.5vw #fff, 18.75vw 23.75vw #fff;
 }
 
 .clouds {
@@ -51,7 +52,7 @@
 .cloud {
   position: absolute;
   background: var(--cloud-color);
-  border-radius: 50px;
+  border-radius: 50%;
   opacity: var(--cloud-opacity);
   transition: background 0.6s ease, opacity 0.6s ease;
 }
@@ -65,48 +66,48 @@
 }
 
 .cloud--1 {
-  top: 90px;
-  left: 480px;
-  width: 100px;
-  height: 30px;
+  top: 18%;
+  left: 60%;
+  width: 12.5%;
+  height: 6%;
 }
 .cloud--1::before {
-  width: 50px;
-  height: 50px;
-  top: -20px;
-  left: 10px;
+  width: 50%;
+  height: 166.7%;
+  top: -66.7%;
+  left: 10%;
 }
 .cloud--1::after {
-  width: 40px;
-  height: 40px;
-  top: -15px;
-  left: 55px;
+  width: 40%;
+  height: 133.3%;
+  top: -50%;
+  left: 55%;
 }
 
 .cloud--2 {
-  top: 150px;
-  left: 600px;
-  width: 70px;
-  height: 22px;
+  top: 30%;
+  left: 75%;
+  width: 8.75%;
+  height: 4.4%;
   transform: scale(0.8);
 }
 .cloud--2::before {
-  width: 35px;
-  height: 35px;
-  top: -14px;
-  left: 8px;
+  width: 50%;
+  height: 159.1%;
+  top: -63.6%;
+  left: 11.4%;
 }
 .cloud--2::after {
-  width: 28px;
-  height: 28px;
-  top: -10px;
-  left: 38px;
+  width: 40%;
+  height: 127.3%;
+  top: -45.5%;
+  left: 54.3%;
 }
 
 .mountains {
   bottom: 0;
   top: auto;
-  height: 260px;
+  height: 52%;
 }
 
 .mountains--back {
@@ -122,7 +123,7 @@
 .mountains--front {
   z-index: 6;
   background: var(--mountain-front);
-  height: 200px;
+  height: 40%;
   clip-path: polygon(
     0% 100%, 0% 70%, 20% 45%, 35% 65%, 55% 30%,
     70% 60%, 85% 40%, 100% 65%, 100% 100%
@@ -132,7 +133,7 @@
 
 .centerpiece {
   z-index: 7;
-  bottom: 90px;
+  bottom: 18%;
   left: 50%;
   top: auto;
   transform: translateX(-50%);
@@ -143,8 +144,8 @@
 
 .tree {
   position: relative;
-  width: 100px;
-  height: 140px;
+  width: clamp(60px, 12.5vw, 100px);
+  aspect-ratio: 5 / 7;
 }
 
 .tree__trunk {
@@ -152,19 +153,19 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 14px;
-  height: 50px;
+  width: 14%;
+  height: 35.7%;
   background: var(--tree-trunk);
   transition: background 0.6s ease;
 }
 
 .tree__foliage {
   position: absolute;
-  bottom: 40px;
+  bottom: 28.6%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 71.4%;
   border-radius: 50%;
   background: var(--tree-foliage);
   transition: background 0.6s ease;
@@ -174,7 +175,7 @@
   z-index: 8;
   top: auto;
   bottom: 0;
-  height: 90px;
+  height: 18%;
   background: var(--ground-color);
   transition: background 0.6s ease;
 }

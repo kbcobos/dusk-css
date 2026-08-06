@@ -4,10 +4,10 @@
 
 .theme-toggle-input {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 52px;
-  height: 28px;
+  top: clamp(10px, 3vw, 16px);
+  right: clamp(10px, 3vw, 16px);
+  width: clamp(40px, 8vw, 52px);
+  height: clamp(22px, 4.3vw, 28px);
   margin: 0;
   opacity: 0;
   cursor: pointer;
@@ -16,10 +16,10 @@
 
 .theme-toggle-label {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 52px;
-  height: 28px;
+  top: clamp(10px, 3vw, 16px);
+  right: clamp(10px, 3vw, 16px);
+  width: clamp(40px, 8vw, 52px);
+  height: clamp(22px, 4.3vw, 28px);
   background: rgba(0, 0, 0, 0.25);
   border-radius: 999px;
   cursor: pointer;
@@ -29,10 +29,10 @@
 
 .theme-toggle-icon {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 22px;
-  height: 22px;
+  top: 12%;
+  left: 6%;
+  width: 76%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: #fff4d6;
   box-shadow: 0 0 8px 1px rgba(255, 244, 214, 0.6);
@@ -44,7 +44,7 @@
 }
 
 .theme-toggle-input:checked ~ .theme-toggle-label .theme-toggle-icon {
-  transform: translateX(24px);
+  transform: translateX(90%);
   background: #e8e8f0;
   box-shadow: 0 0 8px 1px rgba(232, 232, 240, 0.4);
 }
