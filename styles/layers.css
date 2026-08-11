@@ -10,6 +10,7 @@
 
 .celestial-body {
   z-index: 2;
+  inset: auto;
   top: 12%;
   left: 7.5%;
   width: 11%;
@@ -18,7 +19,6 @@
   border-radius: 50%;
   background: var(--celestial-body-color);
   box-shadow: 0 0 40px 10px var(--celestial-body-glow);
-  inset: auto;
   transition: background 0.6s ease, box-shadow 0.6s ease;
 }
 
@@ -133,13 +133,13 @@
 
 .centerpiece {
   z-index: 7;
+  inset: auto;
+  top: auto;
   bottom: 18%;
   left: 50%;
-  top: auto;
   transform: translateX(-50%);
   width: fit-content;
   height: fit-content;
-  inset: auto;
 }
 
 .tree {
